@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WheelWarriors | Premium Car Showroom</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========== HEADER / NAVIGATION ========== -->
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="#home" class="logo">Wheel<span>Warriors</span></a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#cars" data-i18n="nav.cars">Cars</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <select
+              id="languageSelect"
+              class="language-select"
+              aria-label="Language"
+            >
+              <option value="en">English</option>
+              <option value="id">Bahasa Indonesia</option>
+              <option value="fa">فارسی / دری</option>
+            </select>
+            <a href="#contact" class="btn btn-primary" data-i18n="nav.cta"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Premium Car Showroom</p>
+          <h1 data-i18n="hero.title">Drive the Car You Deserve</h1>
+          <p class="hero-text" data-i18n="hero.text">
+            Explore our hand-picked collection of quality cars, from family
+            favourites to electric performance.
+          </p>
+          <a
+            href="#cars"
+            class="btn btn-primary btn-large"
+            data-i18n="hero.button"
+            >Explore the Collection</a
+          >
+        </div>
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&q=80"
+          alt="Car in the WheelWarriors showroom"
+        />
+      </section>
+
+      <!-- ========== CAR COLLECTION ========== -->
+      <section class="collection" id="cars">
+        <div class="section-heading">
+          <h2 data-i18n="cars.title">Our Collection</h2>
+          <p data-i18n="cars.subtitle">
+            Find your next car using search, filters and sorting.
+          </p>
+        </div>
+
+        <!-- Search, filter and sort controls -->
+        <div class="controls">
+          <input
+            type="search"
+            id="searchInput"
+            class="control"
+            data-i18n-placeholder="controls.searchPlaceholder"
+            placeholder="Search by name or brand"
+          />
+
+          <select id="brandFilter" class="control" aria-label="Brand">
+            <option value="all" data-i18n="controls.allBrands">
+              All brands
+            </option>
+          </select>
+
+          <select id="fuelFilter" class="control" aria-label="Fuel type">
+            <option value="all" data-i18n="controls.allFuels">
+              All fuel types
+            </option>
+          </select>
+
+          <select
+            id="transmissionFilter"
+            class="control"
+            aria-label="Transmission"
+          >
+            <option value="all" data-i18n="controls.allTransmissions">
+              All transmissions
+            </option>
+          </select>
+
+          <select id="statusFilter" class="control" aria-label="Availability">
+            <option value="all" data-i18n="controls.allStatuses">
+              All availability
+            </option>
+          </select>
+
+          <select id="sortSelect" class="control" aria-label="Sort">
+            <option value="default" data-i18n="controls.sortDefault">
+              Sort: Default
+            </option>
+            <option value="price-asc" data-i18n="controls.sortPriceAsc">
+              Price: Low to High
+            </option>
+            <option value="price-desc" data-i18n="controls.sortPriceDesc">
+              Price: High to Low
+            </option>
+            <option value="year-desc" data-i18n="controls.sortYearDesc">
+              Year: Newest first
+            </option>
+          </select>
+
+          <button
+            type="button"
+            id="resetButton"
+            class="btn btn-outline"
+            data-i18n="controls.reset"
+          >
+            Reset
+          </button>
+        </div>
+
+        <p class="results-count" id="resultsCount"></p>
+
+        <!-- Messages shown by JavaScript: loading, error, empty -->
+        <div class="status-message" id="statusMessage" hidden></div>
+
+        <!-- JavaScript will build the car cards inside this box -->
+        <div class="car-grid" id="carGrid"></div>
+      </section>
+
+      <!-- ========== ABOUT ========== -->
+      <section class="about" id="about">
+        <div class="about-inner">
+          <h2 data-i18n="about.title">About WheelWarriors</h2>
+          <p data-i18n="about.text1">
+            WheelWarriors is a modern car showroom built around trust,
+            transparency and a passion for great cars.
+          </p>
+          <p data-i18n="about.text2">
+            Every car in our collection is carefully selected so you can compare
+            options clearly and choose with confidence.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section class="contact" id="contact">
+        <div class="contact-inner">
+          <h2 data-i18n="contact.title">Ready to Find Your Car?</h2>
+          <p data-i18n="contact.text">
+            Get in touch with our team. We are happy to answer your questions
+            and arrange a visit.
+          </p>
+          <a
+            href="mailto:hello@wheelwarriors.example"
+            class="btn btn-primary btn-large"
+            data-i18n="contact.button"
+          >
+            Email Us
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a href="#home" class="logo">Wheel<span>Warriors</span></a>
+        <p data-i18n="footer.tagline">Premium cars. Honest service.</p>
+        <p class="footer-copy">
+          &copy; 2026 WheelWarriors.
+          <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ========== CAR DETAILS MODAL (hidden until opened) ========== -->
+    <div class="modal" id="carModal" hidden>
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button
+          type="button"
+          class="modal-close"
+          id="modalClose"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
