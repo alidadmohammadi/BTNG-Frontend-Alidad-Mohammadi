@@ -27,7 +27,7 @@ const modalClose = document.getElementById("modalClose");
 const modalContent = document.getElementById("modalContent");
 
 // ---------- 2. Translations ----------
-// To add or change a text: find its key and edit the line for each language.
+
 
 const translations = {
   // ===== English =====
@@ -521,7 +521,10 @@ const ariaLabelKeys = {
   transmissionFilter: "modal.transmission",
   statusFilter: "modal.status",
   sortSelect: "aria.sort",
-  modalClose: "modal.close"
+  modalClose: "modal.close",
+  railEmail: "contact.button",
+  railCars: "nav.cars",
+  railContact: "nav.contact"
 };
 
 // Turns the API status value into a translated label

@@ -50,25 +50,76 @@
     <main>
       <!-- ========== HERO ========== -->
       <section class="hero" id="home">
-        <div class="hero-content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Premium Car Showroom</p>
-          <h1 data-i18n="hero.title">Drive the Car You Deserve</h1>
-          <p class="hero-text" data-i18n="hero.text">
-            Explore our hand-picked collection of quality cars, from family
-            favourites to electric performance.
-          </p>
-          <a
-            href="#cars"
-            class="btn btn-primary btn-large"
-            data-i18n="hero.button"
-            >Explore the Collection</a
-          >
+        <!-- Giant brand title (the name is the same in every language) -->
+        <h1 class="hero-display">WheelWarriors</h1>
+
+        <!-- Car photo in the middle, with animated smoke on top -->
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="images/hero-car.jpg"
+            alt="A car in the WheelWarriors showroom"
+          />
+          <div class="hero-smoke" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
         </div>
-        <img
-          class="hero-image"
-          src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&q=80"
-          alt="Car in the WheelWarriors showroom"
-        />
+
+        <!-- Icon column on the left -->
+        <div class="hero-rail">
+          <a
+            href="mailto:hello@wheelwarriors.example"
+            id="railEmail"
+            aria-label="Email Us"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+          </a>
+          <a href="#cars" id="railCars" aria-label="Cars">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+          </a>
+          <a href="#contact" id="railContact" aria-label="Contact">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Bottom left: tagline and buttons -->
+        <div class="hero-bottom-left">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Premium Car Showroom</p>
+          <p class="hero-tagline" data-i18n="hero.title">
+            Drive the Car You Deserve
+          </p>
+          <div class="hero-actions">
+            <a
+              href="#cars"
+              class="btn btn-primary btn-large"
+              data-i18n="hero.button"
+              >Explore the Collection</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-outline btn-large"
+              data-i18n="nav.contact"
+              >Contact</a
+            >
+          </div>
+        </div>
+
+        <!-- Bottom right: paragraph -->
+        <p class="hero-text" data-i18n="hero.text">
+          Explore our hand-picked collection of quality cars, from family
+          favourites to electric performance.
+        </p>
       </section>
 
       <!-- ========== CAR COLLECTION ========== -->
